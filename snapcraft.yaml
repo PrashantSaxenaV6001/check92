@@ -1,0 +1,29 @@
+name: check92
+version: 0.1.0
+summary: testing app
+description: testing app for linux icon!
+icon: snap/gui/icon.png
+
+confinement: strict
+base: core18
+grade: stable
+
+slots:
+  dbus-check92: # adjust accordingly to your app name
+    interface: dbus
+    bus: session
+    name: org.bar.check92 # adjust accordingly to your app name and
+
+apps:
+  check92:
+    command: check92
+    extensions: [flutter-master] # Where "master" defines which Flutter channel to use for the build
+    plugs:
+      - network
+    slots:
+      - dbus-check92
+parts:
+  check92:
+    source: https://github.com/PrashantSaxenaV6001/check92.git
+    plugin: flutter
+    flutter-target: lib/main.dart # The main entry-point file of the application

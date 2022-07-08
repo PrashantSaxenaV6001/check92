@@ -1,0 +1,8 @@
+  [Desktop Entry]
+  Name=check92
+  Comment=Check92 that does everything
+  Exec=check92
+  Icon=${SNAP}/meta/gui/icon.png # replace name to your app name
+  Terminal=false
+  Type=Application
+  Categories=Education; #adjust accordingly your snap category
